@@ -2,7 +2,9 @@ const express = require('express')
 const app = express()
 
 app.get('/', function (req, res) {
-  res.send('Hello World!!!!')
+  res.writeHead(200, {"Content-Type": "text/html"});  
+  res.write("<input type='button'/>");  
+  res.end(); 
 })
 
 app.listen(3000, function () {
